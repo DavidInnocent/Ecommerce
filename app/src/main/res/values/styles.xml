@@ -9,4 +9,10 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="BlueTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
 </resources>

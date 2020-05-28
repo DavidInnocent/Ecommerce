@@ -32,12 +32,6 @@ public class LoginFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        Window window=getActivity().getWindow();
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            window.setStatusBarColor(ContextCompat.getColor(getActivity(),R.color.colorDullWhite));
-        }
         super.onCreate(savedInstanceState);
 
     }

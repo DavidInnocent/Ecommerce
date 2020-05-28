@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@drawable/hahaha"
+    android:backgroundTintMode="src_in"
     android:layout_height="match_parent"
     tools:context=".LoginFragment">
 
@@ -46,7 +47,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/home_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -56,6 +57,7 @@
         android:layout_marginRight="32dp"
         android:background="@drawable/button_gradient"
         android:text="LOGIN"
+        android:textStyle="bold"
         android:textSize="16dp"
         android:textColor="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,10 +76,11 @@
         android:layout_marginRight="32dp"
         android:text="SIGN UP"
         android:textColor="@color/colorYellow"
+        android:textStyle="bold"
         android:background="@drawable/sign_up_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/home_button" />
 
     <TextView
         android:id="@+id/textView"

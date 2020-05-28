@@ -11,12 +11,11 @@
         android:label="fragment_inner_home"
         tools:layout="@layout/fragment_inner_home" >
         <action
-            android:id="@+id/action_innerHomeFragment_to_homeFragment2"
-            app:destination="@id/homeFragment2" />
+            android:id="@+id/action_innerHomeFragment_to_overviewFragment"
+            app:destination="@id/overviewFragment" />
     </fragment>
     <fragment
-        android:id="@+id/homeFragment2"
-        android:name="com.davidinnocent.terrasoft.HomeFragment"
-        android:label="fragment_overview"
-        tools:layout="@layout/fragment_overview" />
+        android:id="@+id/overviewFragment"
+        android:name="com.davidinnocent.terrasoft.OverviewFragment"
+        android:label="OverviewFragment" />
 </navigation>

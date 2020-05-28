@@ -76,15 +76,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
-    <include
+    <androidx.cardview.widget.CardView
         android:id="@+id/include"
-        layout="@layout/upper_transactions"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_margin="32dp"
+        app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/circleImageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/circleImageView2"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <include
+            android:id="@+id/includee"
+            layout="@layout/upper_transactions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+
+    </androidx.cardview.widget.CardView>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

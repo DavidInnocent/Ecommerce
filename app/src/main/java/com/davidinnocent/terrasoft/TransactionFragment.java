@@ -13,11 +13,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
 import android.widget.Toast;
 
 import com.davidinnocent.terrasoft.model.Product;
 import com.davidinnocent.terrasoft.model.Transaction;
 import com.davidinnocent.terrasoft.util.TransactionAdapter;
+import com.labo.kaji.fragmentanimations.MoveAnimation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -95,7 +97,7 @@ public class TransactionFragment extends Fragment {
         values.add(new PointValue(12, 11));
 
         //In most cased you can call data model methods in builder-pattern-like manner.
-        Line line = new Line(values).setColor(Color.GREEN).setCubic(true);
+        Line line = new Line(values).setColor(ContextCompat.getColor(getContext(),R.color.colorMaroon)).setCubic(true);
         List<Line> lines = new ArrayList<Line>();
         lines.add(line);
 
@@ -106,7 +108,7 @@ public class TransactionFragment extends Fragment {
 
 
         linearLayout= new LinearLayoutManager(getContext());
-        linearLayout.setOrientation(RecyclerView.HORIZONTAL);
+        linearLayout.setOrientation(RecyclerView.VERTICAL);
 
         List<Transaction> items_list=new ArrayList<>();
 
@@ -116,29 +118,41 @@ public class TransactionFragment extends Fragment {
         product1.setTransaction_description("Transfer to bank -Completed");
         product1.setTransaction_amount("-Ksh 500.00");
         product1.setTransaction_date("Mar 03");
-        product1.setTransaction_image(ContextCompat.getDrawable(getContext(),R.drawable.hot));
+        product1.setTransaction_image(ContextCompat.getDrawable(getContext(),R.drawable.ic_publish_24px));
 
         Transaction product2=new Transaction();
         product2.setTransaction_bank("Payment From Sam");
         product2.setTransaction_description("Transfer to bank -Completed");
         product2.setTransaction_amount("+Ksh 500.00");
-        product1.setTransaction_date("Mar 03");
-        product2.setTransaction_image(ContextCompat.getDrawable(getContext(),R.drawable.green));
+        product2.setTransaction_date("Mar 03");
+        product2.setTransaction_image(ContextCompat.getDrawable(getContext(),R.drawable.ic_publish_24px));
 
         Transaction product3=new Transaction();
         product3.setTransaction_bank("Invoice from Obare");
         product3.setTransaction_amount("+Ksh 1500.00");
-        product1.setTransaction_date("Mar 03");
+        product3.setTransaction_date("Mar 03");
         product3.setTransaction_description("Transfer to bank -Completed");
-        product3.setTransaction_image(ContextCompat.getDrawable(getContext(),R.drawable.button_gradient));
+        product3.setTransaction_image(ContextCompat.getDrawable(getContext(),R.drawable.ic_get_app_24px));
 
 
         items_list.add(product1);
         items_list.add(product2);
         items_list.add(product3);
 
+
+
         TransactionAdapter transactionAdapter=new TransactionAdapter(getContext(),items_list);
         transaction_recycler.setLayoutManager(linearLayout);
         transaction_recycler.setAdapter(transactionAdapter);
+    }
+
+    @Override
+    public Animation onCreateAnimation(int transit, boolean enter, int nextAnim) {
+        if (enter) {
+            return MoveAnimation.create(MoveAnimation.RIGHT, enter, 700);
+        } else {
+//            return CubeAnimation.create(CubeAnimation.UP, enter, 500);
+            return MoveAnimation.create(MoveAnimation.UP, enter, 700);
+        }
     }
 }

@@ -1,6 +1,7 @@
 package com.davidinnocent.terrasoft;
 
 import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -47,6 +48,7 @@ public class ShopFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
 
 
@@ -56,7 +58,6 @@ public class ShopFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
         mainViewModel=new ViewModelProvider(requireActivity()).get(MainViewModel.class);
         return inflater.inflate(R.layout.fragment_shop, container, false);
     }
@@ -64,6 +65,13 @@ public class ShopFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        Window window=getActivity().getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.setStatusBarColor(ContextCompat.getColor(getActivity(),R.color.colorDullWhite));
+        }
         recyclerView=view.findViewById(R.id.my_recycler_view);
         out_of_stock_recycler_view=view.findViewById(R.id.out_of_stock);
 

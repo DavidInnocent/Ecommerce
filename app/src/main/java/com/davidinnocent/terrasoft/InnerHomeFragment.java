@@ -59,10 +59,11 @@ public class InnerHomeFragment extends Fragment {
     @Override
     public Animation onCreateAnimation(int transit, boolean enter, int nextAnim) {
         if (enter) {
-            return MoveAnimation.create(MoveAnimation.RIGHT, enter, 700);
+            return MoveAnimation.create(MoveAnimation.DOWN, enter, 700);
         } else {
 //            return CubeAnimation.create(CubeAnimation.UP, enter, 500);
-            return MoveAnimation.create(MoveAnimation.UP, enter, 700);
+            return MoveAnimation.create(MoveAnimation.DOWN, enter, 700);
+
         }
     }
 }

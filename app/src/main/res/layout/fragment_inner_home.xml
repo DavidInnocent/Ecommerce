@@ -91,7 +91,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView2"
             android:layout_width="29dp"
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
@@ -102,7 +101,6 @@
             app:layout_constraintTop_toTopOf="@+id/textView8" />
 
         <TextView
-            android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -157,7 +155,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/ty"
             android:layout_width="29dp"
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
@@ -168,7 +165,6 @@
             app:layout_constraintTop_toTopOf="@+id/ef" />
 
         <TextView
-            android:id="@+id/rd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -223,7 +219,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/tyy"
             android:layout_width="29dp"
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
@@ -234,7 +229,6 @@
             app:layout_constraintTop_toTopOf="@+id/eff" />
 
         <TextView
-            android:id="@+id/rdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -291,7 +285,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/tyyy"
             android:layout_width="29dp"
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
@@ -312,7 +305,6 @@
             app:layout_constraintTop_toBottomOf="@+id/efff" />
 
         <TextView
-            android:id="@+id/vggg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Process payments"

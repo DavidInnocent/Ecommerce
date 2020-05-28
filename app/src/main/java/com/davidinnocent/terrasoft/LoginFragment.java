@@ -1,9 +1,11 @@
 package com.davidinnocent.terrasoft;
 
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -11,6 +13,8 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.widget.Button;
 
@@ -28,6 +32,12 @@ public class LoginFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        Window window=getActivity().getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.setStatusBarColor(ContextCompat.getColor(getActivity(),R.color.colorDullWhite));
+        }
         super.onCreate(savedInstanceState);
 
     }
@@ -68,9 +78,9 @@ public class LoginFragment extends Fragment {
     @Override
     public Animation onCreateAnimation(int transit, boolean enter, int nextAnim) {
         if (enter) {
-            return MoveAnimation.create(MoveAnimation.UP, enter, 300);
+            return MoveAnimation.create(MoveAnimation.UP, enter, 700);
         } else {
-            return CubeAnimation.create(CubeAnimation.UP, enter, 300);
+            return CubeAnimation.create(CubeAnimation.UP, enter, 700);
         }
     }
 }

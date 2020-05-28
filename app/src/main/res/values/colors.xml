@@ -7,6 +7,7 @@
 
     <color name="colorPrimaryDarkDark">#2B2D81</color>
     <color name="colorDullWhite">#FEFEFE</color>
+
     <color name="colorYellow">#EDA800</color>
     <color name="colorBlack">#222222</color>
     <color name="colorMaroon">#FEB497</color>
@@ -24,9 +25,7 @@
 
 
     <color name="colorPurple">#B894EA</color>
-    <color name="colorGreenLight">#f9f5fe</color>
     <color name="colorGreenDark">#b4e9bb</color>
-    <color name="colorLightChini">#f4fcf5</color>
 
     <color name="colorHomeBottom">#f6f8fb</color>
     <color name="black_overlay">#66000000</color>

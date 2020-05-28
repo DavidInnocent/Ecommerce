@@ -67,7 +67,7 @@
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/piechart"
             android:layout_width="0dp"
-            android:layout_height="250dp"
+            android:layout_height="0dp"
             android:layout_marginStart="32dp"
             android:layout_marginLeft="32dp"
             android:layout_marginEnd="32dp"
@@ -82,8 +82,8 @@
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:layout_marginTop="32dp"
+            android:padding="0dp"
+            android:layout_marginTop="24dp"
             android:text="Overview"
             android:textSize="32sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -118,9 +118,11 @@
                 android:layout_marginLeft="32dp"
                 android:text="Graph View"
                 android:elevation="16dp"
+                android:textAlignment="viewStart"
                 android:textColor="@color/colorPrimary"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="start" />
 
             <Button
                 android:id="@+id/textView14"
@@ -135,9 +137,9 @@
 
             <LinearLayout
                 android:layout_width="50dp"
-                android:layout_height="2dp"
-                android:outlineAmbientShadowColor="@color/colorPrimary"
-                android:orientation="vertical"
+                android:layout_height="5dp"
+                android:layout_marginLeft="8dp"
+               android:background="@drawable/line"
                 app:layout_constraintStart_toStartOf="@+id/textView13"
                 app:layout_constraintTop_toBottomOf="@+id/textView13"></LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

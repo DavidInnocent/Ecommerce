@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/innerHomeFragment"
-        android:name="com.davidinnocent.terrasoft.InnerHomeFragment"
+        android:name="com.davidinnocent.e_commerce.InnerHomeFragment"
         android:label="fragment_inner_home"
         tools:layout="@layout/fragment_inner_home" >
         <action
@@ -15,6 +15,6 @@
     </fragment>
     <fragment
         android:id="@+id/overviewFragment"
-        android:name="com.davidinnocent.terrasoft.OverviewFragment"
+        android:name="com.davidinnocent.e_commerce.OverviewFragment"
         android:label="OverviewFragment" />
 </navigation>

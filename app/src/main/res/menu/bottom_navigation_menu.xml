@@ -11,19 +11,17 @@
         android:icon="@drawable/ic_baseline_shopping_basket_24"
         android:title="Shop"/>
 
+
     <item android:id="@+id/transactionFragment"
         android:icon="@drawable/ic_baseline_credit_card_24"
         android:title="Transactions"/>
 
-
     <item
-        android:id="@+id/sms"
         android:icon="@drawable/ic_baseline_sms_24"
         android:title="sms"/>
 
 
     <item
-        android:id="@+id/accounts"
         android:icon="@drawable/ic_baseline_supervisor_account_24"
         android:title="Account"/>
 

@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.davidinnocent.terrasoft.LoginFragment"
+        android:name="com.davidinnocent.e_commerce.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -15,17 +15,17 @@
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.davidinnocent.terrasoft.HomeFragment"
+        android:name="com.davidinnocent.e_commerce.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/shopFragment"
-        android:name="com.davidinnocent.terrasoft.ShopFragment"
+        android:name="com.davidinnocent.e_commerce.ShopFragment"
         android:label="fragment_shop"
         tools:layout="@layout/fragment_shop" />
     <fragment
         android:id="@+id/transactionFragment"
-        android:name="com.davidinnocent.terrasoft.TransactionFragment"
+        android:name="com.davidinnocent.e_commerce.TransactionFragment"
         android:label="fragment_transaction"
         tools:layout="@layout/fragment_transaction" />
 </navigation>
